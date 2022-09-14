@@ -126,7 +126,8 @@ button {
     color: #fff;
     margin-left: 10px;
     font-size: 14px;
-    background-color: rgb(74, 74, 96);
+   #background-color: rgb(74, 74, 96);
+    background-color: rgb(74, 96, 97);
     width: 88px;
 }
 
@@ -136,13 +137,15 @@ button:focus {
 
 .dp-button:hover {
     color: #fff !important;
-    background-color: rgb(61, 61, 80);
+    #background-color: rgb(61, 61, 80);
+    background-color: rgb(74, 96, 97);
     box-shadow: 0 0 2px 1px rgb(52, 152, 219) !important;
 }
 
 button:active {
     color: #fff !important;
-    background-color: rgb(61, 61, 80) !important;
+    #background-color: rgb(61, 61, 80) !important;
+    background-color: rgb(74, 96, 97) !important;
     box-shadow: 0 0 2px 1px rgb(52, 152, 219) !important;
 }
 
