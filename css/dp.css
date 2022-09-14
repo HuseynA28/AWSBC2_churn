@@ -124,13 +124,17 @@ button {
 
 .dp-button {
     color: #fff;
-    margin-left: 10px;
     font-size: 14px;
-   #background-color: rgb(74, 74, 96);
     background-color: rgb(74, 96, 97);
-    width: 88px;
+    /*width: 88px;*/
+    width: 100%;
 }
-
+#random_{
+    margin-right: 5px;
+}
+#submit_reset {
+    margin-left: 5px;
+}
 button:focus {
     box-shadow: none !important;
 }
@@ -151,16 +155,17 @@ button:active {
 
 
 .content-main {
-    margin: 10px 40px;
+    margin: 50px 40px 10px 10px;
 }
 
 .form-input-text {
     font-size: 14px;
+    width: fit-content;
 }
 
 .form-input {
     height: 30px;
-    max-width: 240px;
+    /*max-width: 240px;*/
 }
 
 .form-row-div {
@@ -183,8 +188,10 @@ button:active {
 }
 
 .form-btn-group {
-    margin-top: 25px;
-    text-align: right;
+    margin-top: 15px;
+    /*text-align: right;*/
+    justify-content: space-between;
+    display: flex;
 }
 
 input[type="text"] {
@@ -196,6 +203,56 @@ input[type="text"] {
 #response_span {
     font-size: 24px;
     color: aqua;
+}
+
+#response_span {
+    visibility: hidden;
+    min-width: 250px;
+    /*margin-left: -125px;*/
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+    /*position: fixed;*/
+    z-index: 1;
+    /*left: 50%;*/
+    /*top: 10px;*/
+    font-size: 17px;
+    height: min-content;
+}
+
+#response_span.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s;
+    animation: fadein 0.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+.snackbar-true {
+    background-color: #04bd29;
+}
+
+.snackbar-false {
+    background-color: #bd042f;
 }
 
 
