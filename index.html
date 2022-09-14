@@ -91,6 +91,7 @@
             e.preventDefault();
             console.log('submit clicked')
             $('#response_span').text('')
+            x.className = "show"
             let submit_btn = $('#submit_btn')
             let reset_btn = $('#submit_reset')
             let random_btn = $('#random_')
@@ -131,9 +132,17 @@
                     },
                     success: function (response) {
                         setTimeout(()=>{
+                        let res_ = JSON.stringify(response).replaceAll('"', '').toString()
                         response_func_1(response)
-                        $('#response_span').text(JSON.stringify(response).replaceAll('"',""));
-                        x.className = "show snackbar-true";
+
+                        $('#response_span').text(res_);
+                        if(res_.toString() === "churn"){
+                            x.className = "show snackbar-false";
+                        }
+                        if(res_.toString() === "not_churn"){
+                            x.className = "show snackbar-true";
+                        }
+
                         },3000)
 
                         // A function to be called if the request succeeds.
@@ -143,6 +152,7 @@
                         // A function to be called when the request finishes
                     }
                 });
+
 
             function response_func_1 (res){
                 console.log(res);
