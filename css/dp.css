@@ -248,11 +248,11 @@ input[type="text"] {
 }
 
 .snackbar-true {
-    background-color: #04bd29;
+    background-color: #bd042f;
 }
 
 .snackbar-false {
-    background-color: #bd042f;
+    background-color: #04bd29;
 }
 
 
