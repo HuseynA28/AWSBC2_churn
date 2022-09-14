@@ -91,7 +91,7 @@
             e.preventDefault();
             console.log('submit clicked')
             $('#response_span').text('')
-            x.className = "show"
+            x.className = x.className.replace("show", "")
             let submit_btn = $('#submit_btn')
             let reset_btn = $('#submit_reset')
             let random_btn = $('#random_')
